@@ -1,0 +1,128 @@
+.lesson-block__connect {
+		position: relative;
+		margin-bottom: 40px;
+
+		&-items {
+			display: flex;
+			justify-content: space-between;
+			width: 800px;
+
+			@include tablets {
+				width: 725px;
+			}
+
+			@include phones {
+				width: 100%;
+			}
+		}
+
+	
+
+		&-list:first-child {
+			.lesson-block__connect-button {
+				right: -15px;
+
+				@include phones {
+					right: -20px;
+				}
+			}
+		}
+		&-list:last-child {
+			.lesson-block__connect-button {
+				left: -15px;
+
+				@include phones {
+					left: -20px;
+				}
+			}
+		}
+
+		ul.lesson-block__connect-list {
+			list-style-type: none;
+			display: flex;
+			flex-direction: column;
+			margin: 0;
+			padding: 0;
+		}
+
+		&-item {
+			background-color: #F3F3F7;
+			border-radius: 4px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			padding: 32px 20px;
+			max-height: 81px;
+			font-weight: bold;
+			font-size: 14px;
+			position: relative;
+			text-align: center;
+			margin-bottom: 15px;
+			width: 300px;
+
+			@include phones {
+				width: 110px;
+				padding: 25px 5px;
+				max-height: 1000px;
+				p {
+					font-size: 8px;
+					word-wrap: break-word;
+					white-space: pre-wrap;
+					text-overflow: ellipsis;
+				}
+			}
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+
+			&.active {
+				border-color: $blue;
+				background-color: rgba(224, 238, 247, 1);
+
+				.lesson-block__connect-button {
+					background-color: $blue;
+					box-shadow: 0px 0px 0px 2px $blue inset;
+				}
+			}
+
+			&.x-wrong {
+				border-color: $red;
+				background-color: rgba(250, 230, 230, 1);
+
+				.lesson-block__connect-button {
+					background-color: $red;
+					box-shadow: 0px 0px 0px 2px $red inset;
+				}
+			}
+
+			&.x-properly {
+				border-color: $green;
+				background-color: rgba(236, 248, 242, 1);
+
+				.lesson-block__connect-button {
+					background-color: $green;
+					box-shadow: 0px 0px 0px 2px $green inset;
+				}
+			}
+		}
+
+		&-button {
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			margin: auto 0;
+			background-color: #fff;
+			width: 34px;
+    	height: 34px;
+			box-shadow: 0px 0px 0px 2px #666666 inset;
+			border: 8px solid #fff;
+			border-radius: 50%;
+			color: $blue;
+
+			&:hover {
+				box-shadow: 0px 0px 0px 2px $blue inset;
+			}
+
+		}
+	}

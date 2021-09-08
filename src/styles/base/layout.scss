@@ -1,0 +1,113 @@
+ul, ol, li, p, h1 {
+	padding: 0;
+	margin: 0;
+}
+
+ul {
+	list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+
+  &:hover {
+    color: $darkblue;
+  }
+}
+
+html {
+  height: 100%;
+  
+}
+
+body {
+  font-family: Montserrat, Verdana, sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  color: $darkgray;
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: 1fr auto;
+
+  @include phones {
+    font-size: 12px;
+  }
+}
+
+.footer {
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+
+
+section {
+  display: flex;
+  margin-bottom: 60px;
+
+  @include phones {
+    margin-bottom: 50px;
+  }
+}
+
+.container {
+  width: 100%;
+  max-width: 1300px;
+	padding: 0px 50px;
+  margin: 0 auto;
+  display: flex;
+	flex-direction: column;
+  position: relative;
+
+  @media screen and (max-width: 4000px) {
+    max-width: 1300px;
+  }
+
+  @include tablets {
+    padding: 0px 20px;
+    max-width: 760px;
+    overflow-x: hidden;
+  }
+  
+  @media screen and (max-width: 610px) {
+    max-width: 550px;
+  }
+
+  @media screen and (max-width: 540px) {
+    max-width: 480px;
+  }
+
+  @include phones {
+    max-width: 90vw;
+    padding: 0px 5px;
+  }
+
+  @media screen and (max-width: 320px) {
+    padding: 0px 10px;
+    max-width: 320px;
+  }
+}
+
+
+.title {
+  color: $darkgray;
+  font-weight: 700;
+  font-size: 36px;
+  margin-top: 0;
+  margin-bottom: 30px;
+
+  @include phones {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+}
+
+.page-enter-active,
+.page-leave-active {
+  transition: opacity 0.5s;
+}
+.page-enter,
+.page-leave-to {
+  opacity: 0;
+}
+
