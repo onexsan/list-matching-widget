@@ -8327,6 +8327,9 @@ section {
 .lesson-block__connect {
   position: relative;
   margin-bottom: 2.5rem; }
+  @media screen and (max-width: 480px) {
+    .lesson-block__connect {
+      margin-bottom: 0.9375rem; } }
   .lesson-block__connect-items {
     display: flex;
     justify-content: space-between;
@@ -8413,3 +8416,17 @@ section {
     color: #2F8BCA; }
     .lesson-block__connect-button:hover {
       box-shadow: 0rem 0rem 0rem 0.125rem #2F8BCA inset; }
+
+.lesson-block__clear {
+  text-align: center;
+  width: 50rem; }
+  @media screen and (max-width: 480px) {
+    .lesson-block__clear {
+      width: unset; } }
+  .lesson-block__clear-button {
+    background-color: #F3F3F7;
+    padding: 1rem 2.25rem;
+    border-radius: 0.25rem; }
+    @media screen and (max-width: 480px) {
+      .lesson-block__clear-button {
+        padding: 0.5rem 2rem; } }

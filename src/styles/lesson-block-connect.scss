@@ -1,6 +1,9 @@
 .lesson-block__connect {
 		position: relative;
 		margin-bottom: 40px;
+		@include phones {
+			margin-bottom: 15px;
+		}
 
 		&-items {
 			display: flex;
@@ -128,3 +131,19 @@
 
 		}
 	}
+
+.lesson-block__clear {
+	text-align: center;
+	width: 50rem;
+	@include phones {
+		width: unset;
+	}
+	&-button {
+		background-color: #F3F3F7;
+		padding: 1rem 2.25rem;
+		border-radius: 0.25rem;
+		@include phones {
+			padding: 0.5rem 2rem;
+		}
+	}
+}
